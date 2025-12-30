@@ -1,6 +1,7 @@
 #pg25304 UoEO service(Business Layer) - user Management
 # hashlib provides hashing functions, such as sha256, which are used for securely hashing passwords.
 import hashlib
+from business.models import User
 #UserService, which contains the business logic for handling user-related operations like registration and login
 
 class UserService:
