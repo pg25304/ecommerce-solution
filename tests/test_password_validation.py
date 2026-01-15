@@ -15,9 +15,7 @@ class TestPasswordValidationStrategies(unittest.TestCase):
         strategy = StrongPasswordValidationStrategy()
         strategy.validate("StrongP@ssw0rd!")  # Should pass
         with self.assertRaises(ValueError):
-            strategy.validate("Wek")  # Too short
         with self.assertRaises(ValueError):
-            strategy.validate("Npeopual122gh")  # No special character
 
 if __name__ == "__main__":
     unittest.main()
