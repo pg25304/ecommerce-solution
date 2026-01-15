@@ -24,7 +24,7 @@ order_service = OrderService(order_repo, product_repo)
 #setup controllers
 user_controller = UserController(user_service)
 
-# python
+""" python
 # In `Demo.py` replace the registration block with this
 try:
     new_user = user_service.register(1, "jack@example.com", "securepassword")
@@ -49,4 +49,4 @@ order = order_service.create_order(
 
 print("Order created for:", order.user.email)
 for product, qty in order.items:
-    print(f"- {product.name} x{qty}")
+    print(f"- {product.name} x{qty}")"""

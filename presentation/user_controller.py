@@ -1,6 +1,7 @@
 #pg25304 UoEO Dec 2025 Controller (presentation layer) for user-related operations
 """This defines a class named UserController, which acts as a bridge between the external interface
  (e.g., web or UI layer) and the business logic in UserService."""
+
 class UserController:
     #initializes the UserController class.
     # takes user_service as a parameter, which is an instance of UserService.

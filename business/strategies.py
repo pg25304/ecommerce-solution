@@ -25,11 +25,11 @@ class StrongPasswordValidationStrategy(PasswordValidationStrategy):
     def validate(self, password):
         if len(password) < 12:
             raise ValueError("Password must be at least 12 characters long")
-        if not any(char.isupper() for char in password):
+        if not any(ch.isupper() for ch in password):
             raise ValueError("Password must contain at least one uppercase letter")
-        if not any(char.islower() for char in password):
+        if not any(ch.islower() for ch in password):
             raise ValueError("Password must contain at least one lowercase letter")
-        if not any(char.isdigit() for char in password):
+        if not any(ch.isdigit() for ch in password):
             raise ValueError("Password must contain at least one digit")
-        if not any(char in "!@#$%^&*()_-+=<>?/{}~" for char in password):
+        if not any(ch in "!@#$%^&*()_-+=<>?/{}~" for ch in password):
             raise ValueError("Password must contain at least one special character")
