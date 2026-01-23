@@ -22,14 +22,3 @@ class ProductRepository(BaseRepository):
         return  list(self.products.values())
 
 
-"""Summary:
-ProductRepository Class:
-This class manages an in-memory collection of Product objects.
-Attributes:
-self.products: A dictionary to store products, where the key is the product_id and the value is the Product object.
-Methods:
-save(product): Saves a Product object to the repository.
-find(product_id): Retrieves a product by its product_id. Returns None if no product is found with the given ID.
-list_all(): Returns a list of all stored Product objects.
-This repository uses in-memory storage, making it suitable for applications with temporary data needs. For production
-scenarios, this could be replaced with a database backend."""

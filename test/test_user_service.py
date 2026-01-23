@@ -1,3 +1,4 @@
+# Unit tests for UserService class
 import unittest
 from business.user_services import UserService
 from business.models import User

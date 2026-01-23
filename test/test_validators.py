@@ -1,3 +1,4 @@
+# Unit tests for business.validators module
 import unittest
 from business.validators import validate_email, validate_password
 
@@ -28,26 +29,3 @@ class TestValidators(unittest.TestCase):
 
 
 
-""" def test_validate_password(self):
-        print("TEST: Validate password with strong and weak cases...")
-
-        # Valid cases
-        self.assertIsNone(validate_password("ValidPass123"), "Failed on valid password: 'ValidPass123'")
-        self.assertIsNone(validate_password("A1bcdeFg"), "Failed on valid password: 'A1bcdeFg'")
-
-        # Edge case: Minimum 8 characters (boundary case)
-        with self.assertRaises(ValueError, msg="Failed to catch error: too short password"):
-            validate_password("Short1")  # Too short (7 characters)
-        self.assertIsNone(validate_password("A1bcdefg"), "Failed on minimum valid password: 'A1bcdefg'")
-
-        # Invalid cases
-        with self.assertRaises(ValueError, msg="Failed to catch error: no uppercase letter"):
-            validate_password("nocapital123")
-        with self.assertRaises(ValueError, msg="Failed to catch error: no lowercase letter"):
-            validate_password("NOLOWER123")
-        with self.assertRaises(ValueError, msg="Failed to catch error: no digit"):
-            validate_password("NoDigitsHere")
-
-        # Edge case: Disallow spaces
-        with self.assertRaises(ValueError, msg="Failed to catch error: spaces in password"):
-            validate_password("Valid Pass123")  # Spaces in password"""

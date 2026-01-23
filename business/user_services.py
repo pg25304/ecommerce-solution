@@ -10,7 +10,7 @@ class UserService:
     def __init__(self, user_repo, password_validation_strategy: PasswordValidationStrategy): #dependency injection
         self.user_repo = user_repo
         self.password_validation_strategy = password_validation_strategy #inject strategy here
-
+    #when registering a user, the service uses the injected password validation strategy to validate the password.
     def register(self, user_id, email, password):
         validate_email(email)  # Validate email format
         self.password_validation_strategy.validate(password)  # Use password strategy
@@ -40,12 +40,8 @@ class UserService:
 
 
 
-       #
 
 
 
 
-"""password_hash = hashlib.sha256(password.encode()).hexdigest()
-password.encode(): Converts the password string into bytes (required by hashlib).
-hashlib.sha256(): Creates a sha256 digest of the password bytes.
-.hexdigest(): Converts the resulting hash into a readable hexadecimal string."""
+

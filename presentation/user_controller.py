@@ -33,15 +33,3 @@ class UserController:
                 return f"Login error: {e}"
 
 
-#This calls the login method of UserService, passing the email and password.
-#The result (True for successful login or False for a failed login) is returned to the caller (e.g., API or UI).
-#UserService handles the actual business logic for authenticating the user.
-#Summary:
-#UserController Class:
-#Provides an interface (methods) for external layers (UI, API, etc.) to interact with the application logic.
-#Delegates the actual work to UserService for:
-#User registration (register_user) → Calls UserService.register.
-#User login (login_user) → Calls UserService.login.
-#The UserController acts as a thin layer that connects
-#external requests (e.g., from APIs or the UI) to the business logic encapsulated in the UserService.
-#It does minimal processing itself and relies on UserService for the heavy lifting."""

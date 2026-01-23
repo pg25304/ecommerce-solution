@@ -8,7 +8,7 @@ class ProductService:
 
     def add_product(self, product_id, name, price, stock):
         """Creates a new Product object and saves it to the repository."""
-        product = Product(product_id, name, price, stock)
+        product = Product (product_id, name, price, stock)
         self.product_repo.save(product)
         return product
 
